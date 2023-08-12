@@ -93,7 +93,17 @@ export default function Dashboard(props) {
 
   let { menu } = useParams();
   let menu_str = "";
-  if (menu == 1) {
+  if (menu == 6) {
+    menu_str = "매매가격지수 - 건설공사비지수";
+  } else if (menu == 5) {
+    menu_str = "매매가격지수 - 거래량";
+  } else if (menu == 4) {
+    menu_str = "중위매매가격 - 가구당소득";
+  } else if (menu == 3) {
+    menu_str = "중위매매가격 - 중위전세가격";
+  } else if (menu == 2) {
+    menu_str = "매매가격지수 - 전세가격지수";
+  } else if (menu == 1) {
     menu_str = "매매가격지수 - 가구당소득";
   } else {
     menu = 0;
@@ -125,6 +135,214 @@ export default function Dashboard(props) {
   let statistics_information2 = "";
 
   switch (selected_menu_name) {
+    case "매매가격지수 - 건설공사비지수": {
+      chart_name1 = "매매가격지수";
+      csv_name1 = "매매가격지수_건설공사비지수_1.csv";
+      statistics_information1 = (
+        <ul>
+          <li>가격지수는 기준시점 대비 조사 시점의 가격 비율입니다.</li>
+          <li>기준시점 = 2022년 1월</li>
+          <li>자료출처 : KB 월간시계열 - 매매APT</li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link
+              color="primary"
+              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
+            >
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      chart_name2 = "건설공사비지수";
+      csv_name2 = "매매가격지수_건설공사비지수_2.csv";
+      statistics_information2 = (
+        <ul>
+          <li>건설공사비지수 (2015년=100)</li>
+          <li>출처 : KICT 공사비원가관리센터</li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link
+              color="primary"
+              href="https://cost.kict.re.kr/#/notice/file/detail/36467"
+            >
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      break;
+    }
+    case "매매가격지수 - 거래량": {
+      chart_name1 = "매매가격지수";
+      csv_name1 = "매매가격지수_거래량_1.csv";
+      statistics_information1 = (
+        <ul>
+          <li>가격지수는 기준시점 대비 조사 시점의 가격 비율입니다.</li>
+          <li>기준시점 = 2022년 1월</li>
+          <li>자료출처 : KB 월간시계열 - 매매APT</li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link
+              color="primary"
+              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
+            >
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      chart_name2 = "거래량";
+      csv_name2 = "매매가격지수_거래량_2.csv";
+      statistics_information2 = (
+        <ul>
+          <li>통계표명 : 월별_아파트매매</li>
+          <li>출처 : 국토교통부</li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link
+              color="primary"
+              href="https://www.reb.or.kr/r-one/na/ntt/selectNttInfo.do?mi=9511&bbsId=1109&nttSn=44765"
+            >
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      break;
+    }
+    case "중위매매가격 - 가구당소득": {
+      chart_name1 = "중위매매가격";
+      csv_name1 = "중위매매가격_가구당소득_1.csv";
+      statistics_information1 = (
+        <ul>
+          <li>
+            표본주택의 매매가격을 순서대로 정렬했을 때 정중앙에 위치한 매매가격
+          </li>
+          <li>자료출처 : KB 월간시계열 - 중위매매</li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link
+              color="primary"
+              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
+            >
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      chart_name2 = "가구당소득";
+      csv_name2 = "중위매매가격_가구당소득_2.csv";
+      statistics_information2 = (
+        <ul>
+          <li>소득 : 가구의 소득(경상소득 + 비경상소득)</li>
+          <li>월소득 5분위별에서 3분위에 해당</li>
+          <li>
+            자료출처 : KOSIS - 주제별 통계 - 소득 소비 자산 - 가계소득지출
+          </li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link
+              color="primary"
+              href="https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1L9V003&vw_cd=MT_ZTITLE&list_id=G_A_10_004_001&scrId=&seqNo=&lang_mode=ko&obj_var_id=&itm_id=&conn_path=MT_ZTITLE&path=%252FstatisticsList%252FstatisticsListIndex.do"
+            >
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      break;
+    }
+    case "중위매매가격 - 중위전세가격": {
+      chart_name1 = "중위매매가격";
+      csv_name1 = "중위매매가격.csv";
+      statistics_information1 = (
+        <ul>
+          <li>
+            표본주택의 매매가격을 순서대로 정렬했을 때 정중앙에 위치한 매매가격
+          </li>
+          <li>자료출처 : KB 월간시계열 - 중위매매</li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link
+              color="primary"
+              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
+            >
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      chart_name2 = "중위전세가격";
+      csv_name2 = "중위전세가격.csv";
+      statistics_information2 = (
+        <ul>
+          <li>
+            표본주택의 전세가격을 순서대로 정렬했을 때 정중앙에 위치한 전세가격
+          </li>
+          <li>자료출처 : KB 월간시계열 - 중위전세</li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link
+              color="primary"
+              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
+            >
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      break;
+    }
+    case "매매가격지수 - 전세가격지수": {
+      chart_name1 = "매매가격지수";
+      csv_name1 = "매매가격지수.csv";
+      statistics_information1 = (
+        <ul>
+          <li>가격지수는 기준시점 대비 조사 시점의 가격 비율입니다.</li>
+          <li>기준시점 = 2022년 1월</li>
+          <li>자료출처 : KB 월간시계열 - 매매APT</li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link
+              color="primary"
+              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
+            >
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      chart_name2 = "전세가격지수";
+      csv_name2 = "전세가격지수.csv";
+      statistics_information2 = (
+        <ul>
+          <li>가격지수는 기준시점 대비 조사 시점의 가격 비율입니다.</li>
+          <li>기준시점 = 2022년 1월</li>
+          <li>자료출처 : KB 월간시계열 - 전세APT</li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link
+              color="primary"
+              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
+            >
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      break;
+    }
     case "매매가격지수 - PIR지수": {
       chart_name1 = "매매가격지수";
       csv_name1 = "매매가격지수_PIR지수.csv";

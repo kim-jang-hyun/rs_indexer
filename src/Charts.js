@@ -95,7 +95,11 @@ export default function Charts({
         }
       }
     },
-
+    yAxis: {
+      title: {
+        enabled: false
+      }
+    },
     tooltip: {
       shared: true,
       shape: "rectangle",
@@ -122,7 +126,11 @@ export default function Charts({
         }
       }
     },
-
+    yAxis: {
+      title: {
+        enabled: false
+      }
+    },
     tooltip: {
       shared: true,
       shape: "rectangle",

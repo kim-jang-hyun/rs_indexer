@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rs-indexer.kro.kr/sitemap.xml

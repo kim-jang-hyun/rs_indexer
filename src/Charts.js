@@ -105,6 +105,9 @@ export default function Charts({
       shape: "rectangle",
       xDateFormat: "%Y-%m"
     },
+    credits: {
+      enabled: false // 하단 라벨 제거(highcharts.com)
+    },
     data: {
       csvURL: window.location.origin + "/" + csv_name1,
       switchRowsAndColumns: true,
@@ -135,6 +138,9 @@ export default function Charts({
       shared: true,
       shape: "rectangle",
       xDateFormat: "%Y-%m"
+    },
+    credits: {
+      enabled: false // 하단 라벨 제거(highcharts.com)
     },
     data: {
       csvURL: window.location.origin + "/" + csv_name2,

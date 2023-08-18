@@ -43,6 +43,10 @@ export default function ListItems({ menu_index, setListNameFunc }) {
         navigate("/6");
         setListNameFunc("매매가격지수 - 건설공사비지수");
         break;
+      case 7:
+        navigate("/7");
+        setListNameFunc("중위매매가격 - 기본형공사비");
+        break;
     }
   }
 
@@ -89,6 +93,12 @@ export default function ListItems({ menu_index, setListNameFunc }) {
         onClick={() => selectListItem(6)}
       >
         <ListItemText primary="매매가격지수 - 건설공사비지수" />
+      </ListItemButton>
+      <ListItemButton
+        selected={selectedIndex == 7}
+        onClick={() => selectListItem(7)}
+      >
+        <ListItemText primary="중위매매가격 - 기본형공사비" />
       </ListItemButton>
     </React.Fragment>
   );

@@ -22,6 +22,7 @@ import { useParams } from "react-router-dom";
 import RouteChangeTracker from "./RouteChangeTracker";
 import { useEffect } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { Helmet } from "react-helmet-async";
 
 function Copyright(props) {
   return (
@@ -33,7 +34,7 @@ function Copyright(props) {
     >
       {"Copyright © "}
       <Link color="inherit" href="/">
-        매매가 지표 비교
+        아파트 매매가 지표 비교
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -90,24 +91,35 @@ const defaultTheme = createTheme();
 
 export default function Dashboard(props) {
   const is_mobile = useMediaQuery(defaultTheme.breakpoints.down("sm"));
+  let meta_tag_title = "";
 
   let { menu } = useParams();
   let menu_str = "";
-  if (menu == 6) {
+  if (menu == 7) {
+    menu_str = "중위매매가격 - 기본형공사비";
+    meta_tag_title = <title>중위매매가격 - 기본형공사비</title>;
+  } else if (menu == 6) {
     menu_str = "매매가격지수 - 건설공사비지수";
+    meta_tag_title = <title>매매가격지수 - 건설공사비지수</title>;
   } else if (menu == 5) {
     menu_str = "매매가격지수 - 거래량";
+    meta_tag_title = <title>매매가격지수 - 거래량</title>;
   } else if (menu == 4) {
     menu_str = "중위매매가격 - 가구당소득";
+    meta_tag_title = <title>중위매매가격 - 가구당소득</title>;
   } else if (menu == 3) {
     menu_str = "중위매매가격 - 중위전세가격";
+    meta_tag_title = <title>중위매매가격 - 중위전세가격</title>;
   } else if (menu == 2) {
     menu_str = "매매가격지수 - 전세가격지수";
+    meta_tag_title = <title>매매가격지수 - 전세가격지수</title>;
   } else if (menu == 1) {
     menu_str = "매매가격지수 - 가구당소득";
+    meta_tag_title = <title>매매가격지수 - 가구당소득</title>;
   } else {
     menu = 0;
     menu_str = "매매가격지수 - PIR지수";
+    meta_tag_title = <title>매매가격지수 - PIR지수</title>;
   }
 
   RouteChangeTracker();
@@ -135,6 +147,52 @@ export default function Dashboard(props) {
   let statistics_information2 = "";
 
   switch (selected_menu_name) {
+    case "중위매매가격 - 기본형공사비": {
+      chart_name1 = "중위매매가격";
+      csv_name1 = "중위매매가격_기본형공사비_1.csv";
+      statistics_information1 = (
+        <ul>
+          <li>
+            표본주택의 매매가격을 순서대로 정렬했을 때 정중앙에 위치한 매매가격
+          </li>
+          <li>자료출처 : KB 월간시계열 - 중위매매</li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link
+              color="primary"
+              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
+            >
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      chart_name2 = "기본형공사비";
+      csv_name2 = "중위매매가격_기본형공사비_2.csv";
+      statistics_information2 = (
+        <ul>
+          <li>분양가상한제 적용주택의 기본형건축비</li>
+          <li>지상층건축비, 단위 : 천원/㎡</li>
+          <li>2019-03-01 ~ : 16 ~ 25층 이하, 60㎡ 초과 ~ 85㎡ 이하</li>
+          <li>
+            2008-02-28 ~ 2018.03.01 : 11 ~ 20층 이하, 60㎡ 초과 ~ 85㎡ 이하
+          </li>
+          <li>자료출처 : 한국주택협회</li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link
+              color="primary"
+              href="https://www.housing.or.kr/user/boardList.do?handle=72&siteId=home&id=home_030104000000"
+            >
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      break;
+    }
     case "매매가격지수 - 건설공사비지수": {
       chart_name1 = "매매가격지수";
       csv_name1 = "매매가격지수_건설공사비지수_1.csv";
@@ -440,6 +498,8 @@ export default function Dashboard(props) {
 
   return (
     <ThemeProvider theme={defaultTheme}>
+      <Helmet>{meta_tag_title}</Helmet>
+
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
         <AppBar position="absolute" open={open}>
@@ -467,7 +527,7 @@ export default function Dashboard(props) {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              매매가 지표 비교
+              아파트 매매가 지표 비교
             </Typography>
           </Toolbar>
         </AppBar>

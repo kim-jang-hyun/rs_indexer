@@ -1,8 +1,12 @@
 < build & run >
 
+npm install
 npm run start:https
 npm run build:https
-serve -s build --ssl-cert "certificate.crt" --ssl-key "private.key"
+// serve -s build --ssl-cert "certificate.crt" --ssl-key "private.key"
+
+server.json파일을 build폴더로 이동
+serve -c server.json build --ssl-cert "certificate.crt" --ssl-key "private.key"
 
 
 

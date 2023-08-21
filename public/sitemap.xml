@@ -8,43 +8,48 @@
 
 
 <url>
-  <loc>https://rs-indexer.kro.kr/</loc>
+  <loc>https://rs-indexer.kro.kr/index.html</loc>
   <lastmod>2023-08-11</lastmod>
 </url>
 
 <url>
-  <loc>https://rs-indexer.kro.kr/1</loc>
+  <loc>https://rs-indexer.kro.kr/1/index.html</loc>
   <lastmod>2023-08-11</lastmod>
 </url>
 
 <url>
-  <loc>https://rs-indexer.kro.kr/2</loc>
+  <loc>https://rs-indexer.kro.kr/2/index.html</loc>
   <lastmod>2023-08-11</lastmod>
 </url>
 
 <url>
-  <loc>https://rs-indexer.kro.kr/3</loc>
+  <loc>https://rs-indexer.kro.kr/3/index.html</loc>
   <lastmod>2023-08-11</lastmod>
 </url>
 
 <url>
-  <loc>https://rs-indexer.kro.kr/4</loc>
+  <loc>https://rs-indexer.kro.kr/4/index.html</loc>
   <lastmod>2023-08-11</lastmod>
 </url>
 
 <url>
-  <loc>https://rs-indexer.kro.kr/5</loc>
+  <loc>https://rs-indexer.kro.kr/5/index.html</loc>
   <lastmod>2023-08-11</lastmod>
 </url>
 
 <url>
-  <loc>https://rs-indexer.kro.kr/6</loc>
+  <loc>https://rs-indexer.kro.kr/6/index.html</loc>
   <lastmod>2023-08-11</lastmod>
 </url>
 
 <url>
-  <loc>https://rs-indexer.kro.kr/7</loc>
+  <loc>https://rs-indexer.kro.kr/7/index.html</loc>
   <lastmod>2023-08-18</lastmod>
+</url>
+
+<url>
+  <loc>https://rs-indexer.kro.kr/8/index.html</loc>
+  <lastmod>2023-08-21</lastmod>
 </url>
 
 </urlset>

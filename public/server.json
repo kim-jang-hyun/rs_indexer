@@ -7,6 +7,7 @@
     { "source": "/4", "destination": "/4/index.html" },
     { "source": "/5", "destination": "/5/index.html" },
     { "source": "/6", "destination": "/6/index.html" },
-    { "source": "/7", "destination": "/7/index.html" }
+    { "source": "/7", "destination": "/7/index.html" },
+    { "source": "/8", "destination": "/8/index.html" }
   ]
 }

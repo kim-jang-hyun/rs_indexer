@@ -34,7 +34,7 @@ function Copyright(props) {
     >
       {"Copyright © "}
       <Link color="inherit" href="/">
-        아파트 매매가 지표 비교
+        아파트 매매가 지표비교
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -96,8 +96,8 @@ export default function Dashboard(props) {
   let { menu } = useParams();
   let menu_str = "";
   if (menu == 8) {
-    menu_str = "매매가격지수 - 건설업 일평균 임금";
-    meta_tag_title = <title>매매가격지수 - 건설업 일평균 임금</title>;
+    menu_str = "매매가격지수 - 건설업 평균임금";
+    meta_tag_title = <title>매매가격지수 - 건설업 평균임금</title>;
   } else if (menu == 7) {
     menu_str = "중위매매가격 - 기본형공사비";
     meta_tag_title = <title>중위매매가격 - 기본형공사비</title>;
@@ -105,8 +105,8 @@ export default function Dashboard(props) {
     menu_str = "매매가격지수 - 건설공사비지수";
     meta_tag_title = <title>매매가격지수 - 건설공사비지수</title>;
   } else if (menu == 5) {
-    menu_str = "매매가격지수 - 거래량";
-    meta_tag_title = <title>매매가격지수 - 거래량</title>;
+    menu_str = "매매가격지수 - 매매거래량";
+    meta_tag_title = <title>매매가격지수 - 매매거래량</title>;
   } else if (menu == 4) {
     menu_str = "중위매매가격 - 가구당소득";
     meta_tag_title = <title>중위매매가격 - 가구당소득</title>;
@@ -150,13 +150,13 @@ export default function Dashboard(props) {
   let statistics_information2 = "";
 
   switch (selected_menu_name) {
-    case "매매가격지수 - 건설업 일평균 임금": {
+    case "매매가격지수 - 건설업 평균임금": {
       chart_name1 = "매매가격지수";
       csv_name1 = "매매가격지수_건설업일평균임금_1.csv";
       statistics_information1 = (
         <ul>
-          <li>가격지수는 기준시점 대비 조사 시점의 가격 비율입니다.</li>
-          <li>기준시점 = 2022년 1월</li>
+          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
+          <li>기준시점 : 2022년 1월 = 100.0</li>
           <li>자료출처 : KB 월간시계열 - 매매APT</li>
           <li>
             자세한 사항은&nbsp;
@@ -170,15 +170,15 @@ export default function Dashboard(props) {
           </li>
         </ul>
       );
-      chart_name2 = "건설업 일평균 임금";
+      chart_name2 = "건설업 평균임금";
       csv_name2 = "매매가격지수_건설업일평균임금_2.csv";
       statistics_information2 = (
         <ul>
-          <li>공표된 시중노임단가는 1일 8시간을 기준 금액</li>
           <li>
-            공표된 시중노임단가는 사용자가 근로의 대가로 노동자에게 일급으로
+            건설업 평균임금 : 사용자가 근로의 대가로 노동자에게 일급으로
             지급하는 기본급여액
           </li>
+          <li>1일 8시간을 기준 금액</li>
           <li>자료출처 : 대한건설협회</li>
           <li>
             자세한 사항은&nbsp;
@@ -200,7 +200,8 @@ export default function Dashboard(props) {
       statistics_information1 = (
         <ul>
           <li>
-            표본주택의 매매가격을 순서대로 정렬했을 때 정중앙에 위치한 매매가격
+            중위매매가격 : 표본주택의 매매가격을 순서대로 정렬했을 때 정중앙에
+            위치한 매매가격
           </li>
           <li>자료출처 : KB 월간시계열 - 중위매매</li>
           <li>
@@ -219,7 +220,7 @@ export default function Dashboard(props) {
       csv_name2 = "중위매매가격_기본형공사비_2.csv";
       statistics_information2 = (
         <ul>
-          <li>분양가상한제 적용주택의 기본형건축비</li>
+          <li>기본형공사비 : 분양가상한제 적용주택의 기본형건축비</li>
           <li>지상층건축비, 단위 : 천원/㎡</li>
           <li>2019-03-01 ~ : 16 ~ 25층 이하, 60㎡ 초과 ~ 85㎡ 이하</li>
           <li>
@@ -245,8 +246,8 @@ export default function Dashboard(props) {
       csv_name1 = "매매가격지수_건설공사비지수_1.csv";
       statistics_information1 = (
         <ul>
-          <li>가격지수는 기준시점 대비 조사 시점의 가격 비율입니다.</li>
-          <li>기준시점 = 2022년 1월</li>
+          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
+          <li>기준시점 : 2022년 1월 = 100.0</li>
           <li>자료출처 : KB 월간시계열 - 매매APT</li>
           <li>
             자세한 사항은&nbsp;
@@ -264,7 +265,11 @@ export default function Dashboard(props) {
       csv_name2 = "매매가격지수_건설공사비지수_2.csv";
       statistics_information2 = (
         <ul>
-          <li>건설공사비지수 (2015년=100)</li>
+          <li>
+            건설공사비지수 : 건설공사 직접공사비(재료, 노무, 장비 등)의
+            가격변동을 측정하는 지수
+          </li>
+          <li>기준시점 : 2015년 = 100.0</li>
           <li>출처 : KICT 공사비원가관리센터</li>
           <li>
             자세한 사항은&nbsp;
@@ -280,13 +285,13 @@ export default function Dashboard(props) {
       );
       break;
     }
-    case "매매가격지수 - 거래량": {
+    case "매매가격지수 - 매매거래량": {
       chart_name1 = "매매가격지수";
       csv_name1 = "매매가격지수_거래량_1.csv";
       statistics_information1 = (
         <ul>
-          <li>가격지수는 기준시점 대비 조사 시점의 가격 비율입니다.</li>
-          <li>기준시점 = 2022년 1월</li>
+          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
+          <li>기준시점 : 2022년 1월 = 100.0</li>
           <li>자료출처 : KB 월간시계열 - 매매APT</li>
           <li>
             자세한 사항은&nbsp;
@@ -300,10 +305,11 @@ export default function Dashboard(props) {
           </li>
         </ul>
       );
-      chart_name2 = "거래량";
+      chart_name2 = "매매거래량";
       csv_name2 = "매매가격지수_거래량_2.csv";
       statistics_information2 = (
         <ul>
+          <li>매매거래량 : 월별 아파트 매매거래량</li>
           <li>통계표명 : 월별_아파트매매</li>
           <li>출처 : 국토교통부</li>
           <li>
@@ -326,7 +332,8 @@ export default function Dashboard(props) {
       statistics_information1 = (
         <ul>
           <li>
-            표본주택의 매매가격을 순서대로 정렬했을 때 정중앙에 위치한 매매가격
+            중위매매가격 : 표본주택의 매매가격을 순서대로 정렬했을 때 정중앙에
+            위치한 매매가격
           </li>
           <li>자료출처 : KB 월간시계열 - 중위매매</li>
           <li>
@@ -345,7 +352,7 @@ export default function Dashboard(props) {
       csv_name2 = "중위매매가격_가구당소득_2.csv";
       statistics_information2 = (
         <ul>
-          <li>소득 : 가구의 소득(경상소득 + 비경상소득)</li>
+          <li>가구당소득 : 가구의 소득(경상소득 + 비경상소득)</li>
           <li>월소득 5분위별에서 3분위에 해당</li>
           <li>
             자료출처 : KOSIS - 주제별 통계 - 소득 소비 자산 - 가계소득지출
@@ -370,7 +377,8 @@ export default function Dashboard(props) {
       statistics_information1 = (
         <ul>
           <li>
-            표본주택의 매매가격을 순서대로 정렬했을 때 정중앙에 위치한 매매가격
+            중위매매가격 : 표본주택의 매매가격을 순서대로 정렬했을 때 정중앙에
+            위치한 매매가격
           </li>
           <li>자료출처 : KB 월간시계열 - 중위매매</li>
           <li>
@@ -390,7 +398,8 @@ export default function Dashboard(props) {
       statistics_information2 = (
         <ul>
           <li>
-            표본주택의 전세가격을 순서대로 정렬했을 때 정중앙에 위치한 전세가격
+            중위전세가격 : 표본주택의 전세가격을 순서대로 정렬했을 때 정중앙에
+            위치한 전세가격
           </li>
           <li>자료출처 : KB 월간시계열 - 중위전세</li>
           <li>
@@ -412,8 +421,8 @@ export default function Dashboard(props) {
       csv_name1 = "매매가격지수.csv";
       statistics_information1 = (
         <ul>
-          <li>가격지수는 기준시점 대비 조사 시점의 가격 비율입니다.</li>
-          <li>기준시점 = 2022년 1월</li>
+          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
+          <li>기준시점 : 2022년 1월 = 100.0</li>
           <li>자료출처 : KB 월간시계열 - 매매APT</li>
           <li>
             자세한 사항은&nbsp;
@@ -431,8 +440,8 @@ export default function Dashboard(props) {
       csv_name2 = "전세가격지수.csv";
       statistics_information2 = (
         <ul>
-          <li>가격지수는 기준시점 대비 조사 시점의 가격 비율입니다.</li>
-          <li>기준시점 = 2022년 1월</li>
+          <li>전세가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
+          <li>기준시점 : 2022년 1월 = 100.0</li>
           <li>자료출처 : KB 월간시계열 - 전세APT</li>
           <li>
             자세한 사항은&nbsp;
@@ -453,8 +462,8 @@ export default function Dashboard(props) {
       csv_name1 = "매매가격지수_PIR지수.csv";
       statistics_information1 = (
         <ul>
-          <li>가격지수는 기준시점 대비 조사 시점의 가격 비율입니다.</li>
-          <li>기준시점 = 2022년 1월</li>
+          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
+          <li>기준시점 : 2022년 1월 = 100.0</li>
           <li>자료출처 : KB 월간시계열 - 매매APT</li>
           <li>
             자세한 사항은&nbsp;
@@ -500,8 +509,8 @@ export default function Dashboard(props) {
       csv_name1 = "매매가격지수_가구당소득.csv";
       statistics_information1 = (
         <ul>
-          <li>가격지수는 기준시점 대비 조사 시점의 가격 비율입니다.</li>
-          <li>기준시점 = 2022년 1월</li>
+          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
+          <li>기준시점 : 2022년 1월 = 100.0</li>
           <li>자료출처 : KB 월간시계열 - 매매APT</li>
           <li>
             자세한 사항은&nbsp;
@@ -519,7 +528,7 @@ export default function Dashboard(props) {
       csv_name2 = "가구당소득.csv";
       statistics_information2 = (
         <ul>
-          <li>소득 : 가구의 소득(경상소득 + 비경상소득)</li>
+          <li>가구당소득 : 가구의 소득(경상소득 + 비경상소득)</li>
           <li>월소득 5분위별에서 3분위에 해당</li>
           <li>
             자료출처 : KOSIS - 주제별 통계 - 소득 소비 자산 - 가계소득지출
@@ -574,7 +583,7 @@ export default function Dashboard(props) {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              아파트 매매가 지표 비교
+              아파트 매매가 지표비교
             </Typography>
           </Toolbar>
         </AppBar>

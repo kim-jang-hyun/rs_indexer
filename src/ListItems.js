@@ -37,7 +37,7 @@ export default function ListItems({ menu_index, setListNameFunc }) {
         break;
       case 5:
         navigate("/5");
-        setListNameFunc("매매가격지수 - 거래량");
+        setListNameFunc("매매가격지수 - 매매거래량");
         break;
       case 6:
         navigate("/6");
@@ -49,7 +49,7 @@ export default function ListItems({ menu_index, setListNameFunc }) {
         break;
       case 8:
         navigate("/8");
-        setListNameFunc("매매가격지수 - 건설업 일평균 임금");
+        setListNameFunc("매매가격지수 - 건설업 평균임금");
         break;
     }
   }
@@ -90,7 +90,7 @@ export default function ListItems({ menu_index, setListNameFunc }) {
         selected={selectedIndex == 5}
         onClick={() => selectListItem(5)}
       >
-        <ListItemText primary="매매가격지수 - 거래량" />
+        <ListItemText primary="매매가격지수 - 매매거래량" />
       </ListItemButton>
       <ListItemButton
         selected={selectedIndex == 6}
@@ -108,7 +108,7 @@ export default function ListItems({ menu_index, setListNameFunc }) {
         selected={selectedIndex == 8}
         onClick={() => selectListItem(8)}
       >
-        <ListItemText primary="매매가격지수 - 건설업 일평균 임금" />
+        <ListItemText primary="매매가격지수 - 건설업 평균임금" />
       </ListItemButton>
     </React.Fragment>
   );

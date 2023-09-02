@@ -95,7 +95,10 @@ export default function Dashboard(props) {
 
   let { menu } = useParams();
   let menu_str = "";
-  if (menu == 8) {
+  if (menu == 9) {
+    menu_str = "매매가격지수 - 통화량";
+    meta_tag_title = <title>매매가격지수 - 통화량</title>;
+  } else if (menu == 8) {
     menu_str = "매매가격지수 - 건설업 평균임금";
     meta_tag_title = <title>매매가격지수 - 건설업 평균임금</title>;
   } else if (menu == 7) {
@@ -150,6 +153,50 @@ export default function Dashboard(props) {
   let statistics_information2 = "";
 
   switch (selected_menu_name) {
+    case "매매가격지수 - 통화량": {
+      chart_name1 = "매매가격지수";
+      csv_name1 = "매매가격지수_통화량1.csv";
+      statistics_information1 = (
+        <ul>
+          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
+          <li>기준시점 : 2022년 1월 = 100.0</li>
+          <li>자료출처 : KB 월간시계열 - 매매APT</li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link
+              color="primary"
+              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
+            >
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      chart_name2 = "통화량";
+      csv_name2 = "매매가격지수_통화량2.csv";
+      statistics_information2 = (
+        <ul>
+          <li>
+            건설업 평균임금 : 사용자가 근로의 대가로 노동자에게 일급으로
+            지급하는 기본급여액
+          </li>
+          <li>1일 8시간을 기준 금액</li>
+          <li>자료출처 : 대한건설협회</li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link
+              color="primary"
+              href="http://www.cak.or.kr/board/boardList.do?boardId=spend_wage&menuId=61"
+            >
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      break;
+    }
     case "매매가격지수 - 건설업 평균임금": {
       chart_name1 = "매매가격지수";
       csv_name1 = "매매가격지수_건설업일평균임금_1.csv";

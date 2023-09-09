@@ -55,6 +55,14 @@ export default function ListItems({ menu_index, setListNameFunc }) {
         navigate("/9");
         setListNameFunc("매매가격지수 - 통화량");
         break;
+      case 10:
+        navigate("/10");
+        setListNameFunc("매매가격지수 - 인구수");
+        break;
+      case 11:
+        navigate("/11");
+        setListNameFunc("매매가격지수 - 세대수");
+        break;
     }
   }
 
@@ -119,6 +127,18 @@ export default function ListItems({ menu_index, setListNameFunc }) {
         onClick={() => selectListItem(9)}
       >
         <ListItemText primary="매매가격지수 - 통화량" />
+      </ListItemButton>
+      <ListItemButton
+        selected={selectedIndex == 10}
+        onClick={() => selectListItem(10)}
+      >
+        <ListItemText primary="매매가격지수 - 인구수" />
+      </ListItemButton>
+      <ListItemButton
+        selected={selectedIndex == 11}
+        onClick={() => selectListItem(11)}
+      >
+        <ListItemText primary="매매가격지수 - 세대수" />
       </ListItemButton>
     </React.Fragment>
   );

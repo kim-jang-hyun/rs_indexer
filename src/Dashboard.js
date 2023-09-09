@@ -95,7 +95,14 @@ export default function Dashboard(props) {
 
   let { menu } = useParams();
   let menu_str = "";
-  if (menu == 9) {
+
+  if (menu == 11) {
+    menu_str = "매매가격지수 - 세대수";
+    meta_tag_title = <title>매매가격지수 - 세대수</title>;
+  } else if (menu == 10) {
+    menu_str = "매매가격지수 - 인구수";
+    meta_tag_title = <title>매매가격지수 - 인구수</title>;
+  } else if (menu == 9) {
     menu_str = "매매가격지수 - 통화량";
     meta_tag_title = <title>매매가격지수 - 통화량</title>;
   } else if (menu == 8) {
@@ -153,6 +160,92 @@ export default function Dashboard(props) {
   let statistics_information2 = "";
 
   switch (selected_menu_name) {
+    case "매매가격지수 - 세대수": {
+      chart_name1 = "매매가격지수";
+      csv_name1 = "매매가격지수_세대수_1.csv";
+      statistics_information1 = (
+        <ul>
+          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
+          <li>기준시점 : 2022년 1월 = 100.0</li>
+          <li>자료출처 : KB 월간시계열 - 매매APT</li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link
+              color="primary"
+              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
+            >
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      chart_name2 = "세대수";
+      csv_name2 = "매매가격지수_세대수_2.csv";
+      statistics_information2 = (
+        <ul>
+          <li>
+            세대수 : "거주자", "거주불명자", "재외국민"이 포함된 자료입니다. 단,
+            외국인은 제외
+          </li>
+          <li>
+            자료출처 : 행정안전부 - 주민등록 인구통계 - 주민등록 인구 및
+            세대현황
+          </li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link color="primary" href="https://jumin.mois.go.kr/">
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      break;
+    }
+    case "매매가격지수 - 인구수": {
+      chart_name1 = "매매가격지수";
+      csv_name1 = "매매가격지수_인구수_1.csv";
+      statistics_information1 = (
+        <ul>
+          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
+          <li>기준시점 : 2022년 1월 = 100.0</li>
+          <li>자료출처 : KB 월간시계열 - 매매APT</li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link
+              color="primary"
+              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
+            >
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      chart_name2 = "인구수";
+      csv_name2 = "매매가격지수_인구수_2.csv";
+      statistics_information2 = (
+        <ul>
+          <li>
+            인구수 : "거주자", "거주불명자", "재외국민"이 포함된 자료입니다. 단,
+            외국인은 제외
+          </li>
+          <li>
+            자료출처 : 행정안전부 - 주민등록 인구통계 - 주민등록 인구 및
+            세대현황
+          </li>
+          <li>
+            자세한 사항은&nbsp;
+            <Link color="primary" href="https://jumin.mois.go.kr/">
+              링크
+            </Link>
+            &nbsp;참조
+          </li>
+        </ul>
+      );
+      break;
+    }
     case "매매가격지수 - 통화량": {
       chart_name1 = "매매가격지수";
       csv_name1 = "매매가격지수_통화량1.csv";
@@ -177,17 +270,23 @@ export default function Dashboard(props) {
       csv_name2 = "매매가격지수_통화량2.csv";
       statistics_information2 = (
         <ul>
+          <li>통화량 : M2(광의통화)</li>
+          <li>단위 : 십억원</li>
+          <br />
           <li>
-            건설업 평균임금 : 사용자가 근로의 대가로 노동자에게 일급으로
-            지급하는 기본급여액
+            M2(광의통화) = M1 + 만기2년미만 정기예적금 + 시장형상품 +
+            만기2년미만 실적배당형상품 + 만기2년미만 금융채 + 기타(CMA,
+            신탁형증권저축, 종금사 발행어음, 2년미만 거주자 외화예금)
           </li>
-          <li>1일 8시간을 기준 금액</li>
-          <li>자료출처 : 대한건설협회</li>
+          <li>
+            자료출처 : 한국은행,「통화금융통계」, 2023.06, 2023.09.04, M2 상품별
+            구성내역(평잔, 계절조정계열)
+          </li>
           <li>
             자세한 사항은&nbsp;
             <Link
               color="primary"
-              href="http://www.cak.or.kr/board/boardList.do?boardId=spend_wage&menuId=61"
+              href="https://kosis.kr/statHtml/statHtml.do?orgId=301&tblId=DT_101Y003&conn_path=I2"
             >
               링크
             </Link>

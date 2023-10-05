@@ -11,6 +11,7 @@
     { "source": "/8", "destination": "/8/index.html" },
     { "source": "/9", "destination": "/9/index.html" },
     { "source": "/10", "destination": "/10/index.html" },
-    { "source": "/11", "destination": "/11/index.html" }
+    { "source": "/11", "destination": "/11/index.html" },
+    { "source": "/12", "destination": "/12/index.html" }
   ]
 }

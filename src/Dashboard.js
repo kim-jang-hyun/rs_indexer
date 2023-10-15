@@ -185,27 +185,11 @@ export default function Dashboard(props) {
       statistics_information1 = (
         <ul>
           <li>
-            인구수 : "거주자", "거주불명자", "재외국민"이 포함된 자료입니다. 단,
-            외국인은 제외
-          </li>
-          <li>
-            자료출처 : 행정안전부 - 주민등록 인구통계 - 주민등록 인구 및
-            세대현황
-          </li>
-          <li>
-            자세한 사항은&nbsp;
-            <Link color="primary" href="https://jumin.mois.go.kr/">
+            설명 :
+            <Link color="primary" href="https://apt-indexer.xyz/10">
               링크
             </Link>
-            &nbsp;참조
-          </li>
-          <br />
-          <li>
-            설명 : 인구수는 특정 지역 또는 국가에서 실제로 거주하는 인원의 수를
-            의미합니다. 인구수는 주로 통계청이나 인구조사를 통해 파악됩니다.
-            인구수는 지역이나 국가의 인구 구성 및 인구 변동을 파악하는 데
-            사용됩니다. 이는 경제, 사회, 정책 등 다양한 분야에서 중요한
-            지표입니다.
+            &nbsp; - 설명 참조
           </li>
         </ul>
       );
@@ -331,23 +315,9 @@ export default function Dashboard(props) {
       csv_name1 = "매매가격지수_세대수_1.csv";
       statistics_information1 = (
         <ul>
-          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
-          <li>기준시점 : 2022년 1월 = 100.0</li>
-          <li>자료출처 : KB 월간시계열 - 매매APT</li>
-          <li>
-            자세한 사항은&nbsp;
-            <Link
-              color="primary"
-              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
-            >
-              링크
-            </Link>
-            &nbsp;참조
-          </li>
-          <br />
           <li>
             설명 :
-            <Link color="primary" href="https://apt-indexer.xyz/10">
+            <Link color="primary" href="https://apt-indexer.xyz">
               링크
             </Link>
             &nbsp; - 설명 참조
@@ -475,23 +445,9 @@ export default function Dashboard(props) {
       csv_name1 = "매매가격지수_인구수_1.csv";
       statistics_information1 = (
         <ul>
-          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
-          <li>기준시점 : 2022년 1월 = 100.0</li>
-          <li>자료출처 : KB 월간시계열 - 매매APT</li>
-          <li>
-            자세한 사항은&nbsp;
-            <Link
-              color="primary"
-              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
-            >
-              링크
-            </Link>
-            &nbsp;참조
-          </li>
-          <br />
           <li>
             설명 :
-            <Link color="primary" href="https://apt-indexer.xyz/5">
+            <Link color="primary" href="https://apt-indexer.xyz">
               링크
             </Link>
             &nbsp; - 설명 참조
@@ -625,23 +581,9 @@ export default function Dashboard(props) {
       csv_name1 = "매매가격지수_통화량1.csv";
       statistics_information1 = (
         <ul>
-          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
-          <li>기준시점 : 2022년 1월 = 100.0</li>
-          <li>자료출처 : KB 월간시계열 - 매매APT</li>
-          <li>
-            자세한 사항은&nbsp;
-            <Link
-              color="primary"
-              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
-            >
-              링크
-            </Link>
-            &nbsp;참조
-          </li>
-          <br />
           <li>
             설명 :
-            <Link color="primary" href="https://apt-indexer.xyz/2">
+            <Link color="primary" href="https://apt-indexer.xyz">
               링크
             </Link>
             &nbsp; - 설명 참조
@@ -780,23 +722,9 @@ export default function Dashboard(props) {
       csv_name1 = "매매가격지수_건설업일평균임금_1.csv";
       statistics_information1 = (
         <ul>
-          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
-          <li>기준시점 : 2022년 1월 = 100.0</li>
-          <li>자료출처 : KB 월간시계열 - 매매APT</li>
-          <li>
-            자세한 사항은&nbsp;
-            <Link
-              color="primary"
-              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
-            >
-              링크
-            </Link>
-            &nbsp;참조
-          </li>
-          <br />
           <li>
             설명 :
-            <Link color="primary" href="https://apt-indexer.xyz/2">
+            <Link color="primary" href="https://apt-indexer.xyz">
               링크
             </Link>
             &nbsp; - 설명 참조
@@ -927,22 +855,6 @@ export default function Dashboard(props) {
       csv_name1 = "중위매매가격_기본형공사비_1.csv";
       statistics_information1 = (
         <ul>
-          <li>
-            중위매매가격 : 표본주택의 매매가격을 순서대로 정렬했을 때 정중앙에
-            위치한 매매가격
-          </li>
-          <li>자료출처 : KB 월간시계열 - 중위매매</li>
-          <li>
-            자세한 사항은&nbsp;
-            <Link
-              color="primary"
-              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
-            >
-              링크
-            </Link>
-            &nbsp;참조
-          </li>
-          <br />
           <li>
             설명 :
             <Link color="primary" href="https://apt-indexer.xyz/3">
@@ -1075,23 +987,9 @@ export default function Dashboard(props) {
       csv_name1 = "매매가격지수_건설공사비지수_1.csv";
       statistics_information1 = (
         <ul>
-          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
-          <li>기준시점 : 2022년 1월 = 100.0</li>
-          <li>자료출처 : KB 월간시계열 - 매매APT</li>
-          <li>
-            자세한 사항은&nbsp;
-            <Link
-              color="primary"
-              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
-            >
-              링크
-            </Link>
-            &nbsp;참조
-          </li>
-          <br />
           <li>
             설명 :
-            <Link color="primary" href="https://apt-indexer.xyz/1">
+            <Link color="primary" href="https://apt-indexer.xyz">
               링크
             </Link>
             &nbsp; - 설명 참조
@@ -1225,23 +1123,9 @@ export default function Dashboard(props) {
       csv_name1 = "매매가격지수_거래량_1.csv";
       statistics_information1 = (
         <ul>
-          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
-          <li>기준시점 : 2022년 1월 = 100.0</li>
-          <li>자료출처 : KB 월간시계열 - 매매APT</li>
-          <li>
-            자세한 사항은&nbsp;
-            <Link
-              color="primary"
-              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
-            >
-              링크
-            </Link>
-            &nbsp;참조
-          </li>
-          <br />
           <li>
             설명 :
-            <Link color="primary" href="https://apt-indexer.xyz/1">
+            <Link color="primary" href="https://apt-indexer.xyz">
               링크
             </Link>
             &nbsp; - 설명 참조
@@ -1358,22 +1242,6 @@ export default function Dashboard(props) {
       statistics_information1 = (
         <ul>
           <li>
-            중위매매가격 : 표본주택의 매매가격을 순서대로 정렬했을 때 정중앙에
-            위치한 매매가격
-          </li>
-          <li>자료출처 : KB 월간시계열 - 중위매매</li>
-          <li>
-            자세한 사항은&nbsp;
-            <Link
-              color="primary"
-              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
-            >
-              링크
-            </Link>
-            &nbsp;참조
-          </li>
-          <br />
-          <li>
             설명 :
             <Link color="primary" href="https://apt-indexer.xyz/3">
               링크
@@ -1386,26 +1254,12 @@ export default function Dashboard(props) {
       csv_name2 = "중위매매가격_가구당소득_2.csv";
       statistics_information2 = (
         <ul>
-          <li>가구당소득 : 가구의 소득(경상소득 + 비경상소득)</li>
-          <li>월소득 5분위별에서 3분위에 해당</li>
           <li>
-            자료출처 : KOSIS - 주제별 통계 - 소득 소비 자산 - 가계소득지출
-          </li>
-          <li>
-            자세한 사항은&nbsp;
-            <Link
-              color="primary"
-              href="https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1L9V003&vw_cd=MT_ZTITLE&list_id=G_A_10_004_001&scrId=&seqNo=&lang_mode=ko&obj_var_id=&itm_id=&conn_path=MT_ZTITLE&path=%252FstatisticsList%252FstatisticsListIndex.do"
-            >
+            설명 :
+            <Link color="primary" href="https://apt-indexer.xyz/1">
               링크
             </Link>
-            &nbsp;참조
-          </li>
-          <br />
-          <li>
-            설명 : 가구당소득은 특정 지역 또는 국가의 가구 수입을 가구 인원 수로
-            나눈 값으로, 가구당 평균 소득을 의미합니다. 가구당소득은 해당 지역의
-            경제 상황과 가계경제의 건강상태를 나타내는 지표입니다.
+            &nbsp; - 설명 참조
           </li>
         </ul>
       );
@@ -1449,41 +1303,11 @@ export default function Dashboard(props) {
       statistics_information5 = (
         <ul>
           <li>
-            가구당 소득은 대한민국에서 조정가구와 가사주의 소득을 합친 것으로,
-            가구 내의 모든 구성원의 소득을 합산하여 나눈 값입니다. 대한민국의
-            가구당 소득은 일반적으로 상승하는 경향을 보이고 있습니다.
-          </li>
-          <br />
-          <li>
-            2000년부터 최근까지의 데이터를 살펴보면, 대한민국의 가구당 소득은
-            전반적으로 상승하고 있습니다. 특히 2000년대 후반부터 2010년대
-            중반까지의 기간에 가장 큰 상승세를 보였습니다. .
-          </li>
-          <br />
-          <li>
-            이러한 상승세는 한 가구 내의 총 소득이 증가하면서 가구당 소득도
-            상승하는 경향을 반영합니다. 가구 내 구성원의 고용률 증가, 임금 상승,
-            기업의 성과 향상 등 여러 요인이 이러한 가구당 소득 상승에
-            기여하였습니다.
-          </li>
-          <br />
-          <li>
-            그러나 상승세가 모든 가구에 공평하게 적용되고 있는 것은 아닙니다.
-            소득 격차가 여전히 존재하여 상위 소득층은 가구당 소득의 상승세를
-            보이는 반면, 하위 소득층은 소득 상승 폭이 제한되고 있습니다. 이는
-            소득분배의 불균형 문제로 여겨집니다.
-          </li>
-          <br />
-          <li>
-            정부는 소득격차 축소와 저소득층의 생활 개선을 위해 다양한 정책을
-            시행하고 있습니다. 그러나 여전히 가구당 소득의 불균형은 개선이
-            필요한 과제로 남아있습니다.
-          </li>
-          <br />
-          <li>
-            따라서 대한민국의 가구당 소득은 일반적으로는 상승하고 있지만,
-            소득격차가 여전히 존재하고 있음을 알 수 있습니다. 가구당 소득 상승과
-            함께 모든 인구층의 소득 개선을 위해 지속적인 노력이 필요합니다.
+            설명 :
+            <Link color="primary" href="https://apt-indexer.xyz/1">
+              링크
+            </Link>
+            &nbsp; - 설명 참조
           </li>
         </ul>
       );
@@ -1657,20 +1481,6 @@ export default function Dashboard(props) {
       csv_name1 = "매매가격지수.csv";
       statistics_information1 = (
         <ul>
-          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
-          <li>기준시점 : 2022년 1월 = 100.0</li>
-          <li>자료출처 : KB 월간시계열 - 매매APT</li>
-          <li>
-            자세한 사항은&nbsp;
-            <Link
-              color="primary"
-              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
-            >
-              링크
-            </Link>
-            &nbsp;참조
-          </li>
-          <br />
           <li>
             설명 :
             <Link color="primary" href="https://apt-indexer.xyz/">
@@ -1927,20 +1737,6 @@ export default function Dashboard(props) {
       csv_name1 = "매매가격지수_가구당소득.csv";
       statistics_information1 = (
         <ul>
-          <li>매매가격지수 : 기준시점 대비 조사 시점의 가격 비율입니다.</li>
-          <li>기준시점 : 2022년 1월 = 100.0</li>
-          <li>자료출처 : KB 월간시계열 - 매매APT</li>
-          <li>
-            자세한 사항은&nbsp;
-            <Link
-              color="primary"
-              href="https://kbland.kr/webview.html#/main/statistics?blank=true"
-            >
-              링크
-            </Link>
-            &nbsp;참조
-          </li>
-          <br />
           <li>
             설명 :
             <Link color="primary" href="https://apt-indexer.xyz/">
